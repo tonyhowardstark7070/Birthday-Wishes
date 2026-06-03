@@ -148,31 +148,27 @@ button:hover {
     color: #ddd;
 }
 
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    max-width: 800px;
-    margin: 0 auto 50px;
-}
-
-.photo-grid img {
+/* Single Photo Display */
+.single-photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 200px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.single-photo {
+    width: 100%;
+    max-width: 350px; /* Photo ka size yahan se adjust kar sakte ho */
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    border: 2px solid rgba(255,255,255,0.1);
-    transition: transform 0.3s;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(255, 71, 87, 0.3); /* Romantic soft shadow */
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.photo-grid img:hover {
+.single-photo:hover {
     transform: scale(1.05);
-}
-
-/* Responsive Grid for mobile */
-@media (max-width: 600px) {
-    .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    box-shadow: 0 20px 45px rgba(255, 71, 87, 0.6);
 }
