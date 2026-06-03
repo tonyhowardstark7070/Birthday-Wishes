@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Surprise</title>
+    <!-- Importing Montserrat Font like the video -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Falling Hearts Container -->
+    <div id="heart-container"></div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="assets/song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Step 1 -->
+    <div id="step-1" class="screen active">
+        <h2>It's Your Special Day</h2>
+        <button onclick="nextStep(1)">NEXT</button>
+    </div>
+
+    <!-- Step 2 -->
+    <div id="step-2" class="screen">
+        <h2>Ready for your surprise?</h2>
+        <button onclick="nextStep(2)">LET'S GO</button>
+    </div>
+
+    <!-- Step 3 -->
+    <div id="step-3" class="screen">
+        <h2>Music makes it better...</h2>
+        <button onclick="playMusicAndNext()">PLAY MUSIC</button>
+    </div>
+
+    <!-- Step 4: Trigger Curtains -->
+    <div id="step-4" class="screen">
+        <h2>The Stage is Set...</h2>
+        <button onclick="openCurtains()">SHOW THE MESSAGE</button>
+    </div>
+
+    <!-- The Red Curtains -->
+    <div id="curtain-container">
+        <div id="curtain-left" class="curtain"></div>
+        <div id="curtain-right" class="curtain"></div>
+    </div>
+
+    <!-- Final Step 5 -->
+    <div id="step-5" class="screen final-screen">
+        <div class="message-box">
+            <!-- YAHAN NAAM CHANGE KAR LENA -->
+            <h2>Happy Birthday, [Name]! 🎈</h2>
+            <p>Today isn't just a date on the calendar, it's a celebration of the light you bring into my life. Every moment with you is like a frame from a beautiful movie, and I'm so lucky to be a part of it. May this year be filled with magic.</p>
+        </div>
+        
+        <h2>Moments in Time</h2>
+        <div class="photo-grid">
+            <img src="assets/photo1.jpg" alt="Memory 1">
+            <img src="assets/photo2.jpg" alt="Memory 2">
+            <img src="assets/photo3.jpg" alt="Memory 3">
+            <img src="assets/photo4.jpg" alt="Memory 4">
+            <img src="assets/photo5.jpg" alt="Memory 5">
+            <img src="assets/photo6.jpg" alt="Memory 6">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
